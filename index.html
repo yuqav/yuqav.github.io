@@ -24,13 +24,13 @@
     <h1>YUQAV TAG</h1>
     <p>HAHAHAHA</p>
 
-    <!-- Аудио без autoplay, будет запущено только после клика -->
+    <!-- Путь к аудио внутри репозитория -->
     <audio id="autoAudio">
-        <source src="https://golnk.ru/xln5Y" type="audio/mp3">
+        <source src="sound.mp3" type="audio/mp3">
         Ваш браузер не поддерживает аудио элемент.
     </audio>
 
-    <!-- Кнопка для включения звука -->
+    <!-- Кнопка для запуска звука -->
     <button id="playButton">Включить звук</button>
 
     <script>
@@ -38,7 +38,7 @@
             const audio = document.getElementById('autoAudio');
             audio.play().then(() => {
                 console.log('Аудио воспроизводится');
-                document.getElementById('playButton').style.display = 'none'; // Скрыть кнопку после воспроизведения
+                document.getElementById('playButton').style.display = 'none'; // Скрыть кнопку после запуска
             }).catch(err => {
                 console.error('Не удалось воспроизвести аудио:', err);
             });
