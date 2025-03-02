@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>YUQAV TAG</title>
+</head>
+<body>
+    <h1>YUQAV TAG</h1>
+    <p>HAHAHAHA</p>
+
+    <audio id="autoAudio" autoplay>
+        <source src="https://golnk.ru/xln5Y" type="audio/mp3">
+    </audio>
+
+    <script>
+        document.addEventListener('click', () => {
+            const audio = document.getElementById('autoAudio');
+            if (audio.paused) {
+                audio.play().catch(err => console.error('Автозапуск заблокирован:', err));
+            }
+        }, { once: true });
+
+        window.onload = () => {
+            const audio = document.getElementById('autoAudio');
+            audio.play().catch(err => console.warn('Автозапуск может быть заблокирован браузером.'));
+        };
+    </script>
+</body>
+</html>
